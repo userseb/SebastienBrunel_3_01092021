@@ -1,0 +1,585 @@
+* a {
+  text-decoration: none;
+  color: initial;
+}
+ul.footer {
+  list-style-type: none;
+}
+/***mixins***/
+@mixin flex-mid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+@mixin btn-menu-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border-radius: 15px 15px;
+  padding: 0 20px;
+  box-shadow: 0px 10px 12px 5px rgba(220, 218, 218, 0.75);
+}
+
+/***mixins***/
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: "roboto", sans-serif;
+}
+.header {
+  @include flex-mid;
+  height: 80px;
+  font-family: "Shrikhand", cursive;
+  width: 100%;
+  box-shadow: 0 0 20px 8px 20px #d3d3d3;
+}
+.head-logo-P {
+  @include flex-mid;
+  width: 100%;
+  height: 100%;
+
+  .head-logo-D {
+    font-family: "roboto", sans-serif;
+    margin: 0;
+    list-style: none;
+    font-size: 18px;
+  }
+}
+.main {
+  @include flex-mid;
+  font-size: 18px;
+}
+.location {
+  @include flex-mid;
+  .icon-location {
+    @include flex-mid;
+    font-weight: 900;
+    height: 60px;
+    background: #eaeaea;
+    width: 100%;
+  }
+  p {
+    margin-left: 15px;
+  }
+}
+.blocs-intro {
+  @include flex-mid;
+  flex-direction: column;
+  width: 100%;
+  padding: 50px 0;
+  background: #f6f6f6;
+  .title-intro {
+    text-align: center;
+    max-width: 250px;
+    margin: 0;
+  }
+  .text-intro {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  .btn-intro {
+    @include flex-mid;
+    background-image: linear-gradient(
+      to top,
+      #b387d6,
+      #bf85d9,
+      #cc81db,
+      #d97edc,
+      #e779db
+    );
+    height: 50px;
+    width: 220px;
+    text-align: center;
+    border-radius: 200px;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0px 5px 36px -7px rgba(0, 0, 0, 0.41);
+    -webkit-box-shadow: 0px 5px 36px -7px rgba(0, 0, 0, 0.41);
+    -moz-box-shadow: 0px 5px 36px -7px rgba(0, 0, 0, 0.41);
+    p {
+      text-align: center;
+      padding: 0;
+      list-style: none;
+      border-radius: 200px;
+      color: white;
+    }
+  }
+}
+.btn-intro:hover {
+  box-shadow: 0px 0px 4px 4px #e17bdc88;
+  -webkit-box-shadow: 0px 0px 4px 4px #e17bdc88;
+  -moz-box-shadow: 0px 0px 4px 4px #e17bdc88;
+  transform: scale(1.05);
+  transition: 0.1s;
+}
+/******process******/
+.section.process {
+  padding-bottom: 50px;
+}
+section.process h2 {
+  margin-left: 20px;
+}
+.process-bloc {
+  @include flex-mid;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.process-bloc-resto {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin: 10px 20px;
+  background: #f6f6f6;
+  height: 75px;
+  width: 85%;
+  border-radius: 12px;
+  box-shadow: 0 5px 6px 2px #3a38381c;
+  .btn {
+    background: #9356dc;
+    padding: 5px 10px;
+    border-radius: 50px;
+    margin-left: -12px;
+    color: #f2f2f2;
+  }
+
+  .btn-case {
+    display: flex;
+    width: 250px;
+    margin: 0 15px;
+    justify-content: space-around;
+  }
+
+  .btn_text {
+    font-weight: 600;
+    width: 100%;
+    margin-left: 10px;
+  }
+}
+.process-bloc-resto:hover {
+  background: #f5edff;
+  transform: scale(1.1);
+  transition: 0.31s;
+  color: #9356dc;
+  box-shadow: 0px 0px 3px 2px #9256dc4b;
+  -webkit-box-shadow: 0px 0px 3px 2px #9256dc4b;
+  -moz-box-shadow: 0px 0px 3px 2px #9256dc4b;
+  .btn_text {
+    color: black;
+  }
+}
+
+/****restaurants****/
+.restaurants {
+  background: #f6f6f6;
+  margin-top: 50px;
+  width: 100%;
+}
+.restaurants h2 {
+  margin-left: 20px;
+}
+.bloc-restaurant {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+  width: 100%;
+  justify-items: center;
+  height: 100%;
+}
+.bloc-restaurants.a {
+  border-radius: 25px;
+}
+.items {
+  width: 90%;
+  height: 90%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.25fr 1fr 0.25fr;
+  border-radius: 25px;
+  margin: 0;
+  box-shadow: 0px 2px 19px 0px rgba(194, 188, 188, 0.92);
+}
+.items:hover {
+  transform: scale(1.02);
+  transition: 0.22s;
+  box-shadow: 0px 0px 3px 3px #e17bdc88;
+  -webkit-box-shadow: 0px 0px 3px 3px #e17bdc88;
+  -moz-box-shadow: 0px 0px 3px 3px #e17bdc88;
+}
+.card-new {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 10px;
+  margin: 0 10px;
+  align-items: center;
+  .new {
+    @include flex-mid;
+    background: #99e2d0;
+    height: 28px;
+    width: 85px;
+    border-radius: 3px;
+  }
+}
+.text-case {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-row: 4;
+  background: white;
+  border-radius: 0 0 25px 25px;
+  padding: 0 20px;
+  .case-text-title {
+    margin: 15px 0 0 0;
+  }
+  .text-food {
+    margin: 5px 0 10px 0;
+  }
+}
+#icon {
+  display: none;
+}
+.text-icon {
+  display: flex;
+  font-size: 30px;
+  height: 30px;
+  width: 30px;
+
+  .far {
+    height: 35px;
+    width: 35px;
+  }
+  .fas {
+    visibility: hidden;
+  }
+}
+.item1 {
+  background: url(/src/img-resto/LaPaletteDuGout.jpg) center;
+  background-size: cover;
+  border-radius: 25px;
+  object-fit: cover;
+}
+.item2 {
+  background: url(/src/img-resto/LaNoteEnchantée.jpg) center;
+  background-size: cover;
+}
+.item3 {
+  background: url(/src/img-resto/ALaFrancaise.jpg) center;
+  background-size: cover;
+}
+.item4 {
+  background: url(/src/img-resto/LeDeliceDesSens.jpg) center;
+  background-size: cover;
+}
+.text-icon:hover {
+  .far {
+    display: none;
+  }
+  .fas {
+    visibility: visible;
+    transition-duration: 0.5s;
+    background-image: linear-gradient(
+      to top,
+      #b387d6,
+      #bf85d9,
+      #cc81db,
+      #d97edc,
+      #e779db
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: #353535;
+  color: white;
+  h3 {
+    margin-left: 10px;
+    font-family: "Shrikhand", cursive;
+    font-weight: 500;
+  }
+}
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  padding: 0;
+  align-items: flex-end;
+  margin: 0 0 30px 10px;
+  .footer_1,
+  .footer_2,
+  .footer_3,
+  .footer_4 {
+    width: 100%;
+    margin: 0 10px 10px 10px;
+  }
+
+  .icon-text {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    color: white;
+    margin: 0 0 0 10px;
+    h4 {
+      margin: 0 10px 0 10px;
+    }
+  }
+}
+.mentions,
+.contact {
+  color: white;
+  margin: 0 0 0 10px;
+  width: 100%;
+}
+/******pages-restaurants******/
+.R-header {
+  width: auto;
+  .R-icon-text {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.5fr 3fr 0.5fr;
+    align-items: center;
+    justify-items: center;
+  }
+  .head-logo-D {
+    font-family: "Shrikhand", cursive;
+    margin: 8px 0;
+  }
+}
+.card-menu {
+  width: 100%;
+  display: grid;
+  height: 60%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 0.5fr;
+  background: #f6f6f6;
+}
+.card-img-text {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.75fr 1fr 1fr 0.75fr;
+  background: url(/src/img-resto/LaPaletteDuGout.jpg) center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+.card-text-case {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Shrikhand", cursive;
+  grid-row: 4;
+  background: #f6f6f6;
+  font-size: 16px;
+  letter-spacing: 1px;
+  border-radius: 35px 35px 0 0;
+  font-style: normal;
+  .card-title {
+    margin: 25px 0;
+  }
+
+  .far,
+  .fas {
+    font-size: 27px;
+  }
+  .fas {
+    display: none;
+  }
+  #icones-heart:hover {
+    .far {
+      display: none;
+    }
+    .fas {
+      display: block;
+      visibility: visible;
+      transition-duration: 0.5s;
+      background-image: linear-gradient(
+        to top,
+        #b387d6,
+        #bf85d9,
+        #cc81db,
+        #d97edc,
+        #e779db
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+.sections-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: auto;
+  margin: 0 10px;
+  row-gap: 8px;
+  .title-underline {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .entrees {
+      margin: 10px 0 8px 10px;
+    }
+    .underline {
+      height: 1px;
+      background: rgb(9, 255, 0);
+      width: 12%;
+      margin: 0 0 5px 10px;
+    }
+  }
+}
+.items-menu {
+  width: 80%;
+}
+.check-icon {
+  display: flex;
+  font-size: 30px;
+  background: #99E2D0;
+  padding: 25px 25px 25px 25px;
+  border-radius: 0 15px 15px 0;
+  display: none;
+  animation: 1s linear 0.1s icon;
+}
+@keyframes opacité {
+  from {
+   opacity:0;
+  }
+  to {
+    opacity: 1;
+  }
+  
+}
+.check-icon:hover {
+  display:inline-block;
+
+}
+.btn-text-case {
+  @include btn-menu-flex;
+  width: 100%;
+  padding: 0 0 0 20px;
+  height: 100%;
+  border-radius: 15px;
+
+  .fa-check-circle {
+    color: white;
+  }
+  .name-menu > h3,
+  p {
+    margin: 5px 0;
+    font-size: 10px;
+  }
+  .price-menu {
+    margin-bottom: 5px;
+    margin-right: 20px;
+    font-weight: 700;
+  }
+}
+
+.search {
+  @include flex-mid;
+  max-height: 200px;
+}
+.btn-search {
+  display: flex;
+  padding-left: 20px;
+  justify-content: center;
+  background: white;
+  width: 100%;
+  border-radius: 50px;
+  box-shadow: 0px 10px 12px 5px rgba(220, 218, 218, 0.75);
+  background-image: linear-gradient(
+    to top,
+    #b387d6,
+    #bf85d9,
+    #cc81db,
+    #d97edc,
+    #e779db
+  );
+  p {
+    color: white;
+  }
+}
+#note-E {
+  background: url(/src/img-resto/LaNoteEnchantée.jpg) center;
+  background-size: cover;
+}
+#francaise {
+  background: url(/src/img-resto/ALaFrancaise.jpg) center;
+  background-size: cover;
+}
+#sens {
+  background: url(/src/img-resto/LeDeliceDesSens.jpg) center;
+  background-size: cover;
+}
+#section1 {
+  animation-name:opacité;
+  animation-duration: 4s;
+    animation-delay: 0s;
+    #m-item1 {
+      animation-name: opacité;
+      animation-duration: 3s;
+      animation-delay: 0;
+    }
+    #m-item2 {
+      animation-name: opacité;
+      animation-duration: 3s;
+      animation-delay: 1s;
+    }
+    #m-item3 {
+      animation-name: opacité;
+      animation-duration: 2s;
+      animation-delay: 3s;
+    }
+  }
+  #section2{
+    animation-name:opacité;
+  animation-duration: 3s;
+    animation-delay: 0s;
+    #m-item1 {
+      animation-name: opacité;
+      animation-iteration-count: 1;
+      animation-delay: 0s;
+    }
+    #m-item2 {
+      animation-name: opacité;
+      animation-delay: 1s;
+      animation-iteration-count: 1;
+    }
+    #m-item3 {
+      animation-name: opacité;
+      animation-duration: 2s;
+      animation-delay: 3s;
+      animation-iteration-count: 1;
+    }
+  }
+  #section3 {
+    animation-name:opacité;
+    animation-duration: 3s;
+      animation-delay: 0s;
+      #m-item1 {
+        animation-name: opacité;
+        animation-duration: 3s;
+        animation-delay: 0s;
+      }
+      #m-item2 {
+        animation-name: opacité;
+        animation-duration: 3s;
+        animation-delay: 2s;
+      }
+      #m-item3 {
+        animation-name: opacité;
+        animation-duration: 2s;
+        animation-delay: 3s;
+      }
+    }
+
+  
