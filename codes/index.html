@@ -3,8 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.9" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (min-width:900px) and  ( max-width: 1400px )"
+      href="width900px.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       rel="stylesheet"
@@ -18,9 +23,25 @@
       href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
       rel="stylesheet"
     />
-    <title>ohmyfood</title>
+    <title>ohmyfood/Accueil</title>
   </head>
   <body>
+    <div class="loader">
+      
+      <div class="monloader">
+        
+          <div class="circle-items circle-1">
+            <div class="circle-items circle-2">
+              <div class="circle-items circle-3">
+                <i class="fas fa-utensils"id="loader-utensils"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+              
+        
+      </div>
+    </div>
     <header class="header">
       <div class="headlogo-P">
         <a href="index.html">
@@ -96,7 +117,7 @@
           </div>
         </a>
         
-        <a class="items item2" href="P.gout2.html">
+        <a class="items item2" href="note-enchanté.html">
           <div class="card-new">
             <p class="new">Nouveau</p>
           </div>
@@ -112,7 +133,7 @@
           </div>
         </a>
 
-        <a class="items item3" href="P.gout3.html">
+        <a class="items item3" href="francaise.html">
           <div class="card-new">
             <p class="new">Nouveau</p>
           </div>
@@ -128,7 +149,7 @@
           </div>
         </a>
 
-        <a class="items item4" href="P.gout4.html">
+        <a class="items item4" href="d.sens.html">
           <div class="card-new">
             <p class="new">Nouveau</p>
           </div>
@@ -152,18 +173,18 @@
       <ul class="footer-list">
         <li class="footer_1"><a href="#">
           <div class="icon-text">
-            <i class="fas fa-utensils"></i>
-            <h4>Proposer un restaurant</h4>
+            <i class="fas fa-utensils"id="footer-utensils"></i>
+            <h4 class="mentions">Proposer un restaurant</h4>
           </div>
         </a></li>
         <li class="footer_2"><a href="#">
           <div class="icon-text">
             <i class="fas fa-hands-helping"></i>
-            <h4>Devenir partenaire</h4>
+            <h4 class="mentions">Devenir partenaire</h4>
           </div>
         </a></li>
-        <li class="footer_3"><a href="#"><p class="mentions">Mentions légales</p></a></li>
-        <li class="footer_4"><a href="#"><p class="contact">Contact</p></a></li>
+        <li class="footer_3" id="f-p"><a href="#"><p class="mentions">Mentions légales</p></a></li>
+        <li class="footer_4" id="f-p"><a href="#"><p class="mentions">Contact</p></a></li>
       </ul>
 
     </footer>
