@@ -523,8 +523,8 @@ footer {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 0.75fr 1fr 1fr 0.75fr;
-  background: url(/src/img-resto/LaPaletteDuGout.jpg) center;
-  background-size: cover;
+
+  
   width: 100%;
   height: 100%;
 }
@@ -745,16 +745,30 @@ padding-left: 2px;
     color: white;
   }
 }
-#note-E {
-  background: url(src/img-resto/LaNoteEnchantée.jpg) center;
-  background-size: cover;
-}
+
 .item3 {
   background: url(src/img-resto/ALaFrancaise.jpg) center;
   background-size: cover;
 }
 .item4 {
   background: url(src/img-resto/LeDeliceDesSens.jpg) center;
+  background-size: cover;
+}
+#francaise  {
+
+  background: url(src/img-resto/ALaFrancaise.jpg) center;
+  background-size: cover;
+}
+#sens {
+  background: url(src/img-resto/LeDeliceDesSens.jpg) center ;
+  background-size: cover;
+}
+#palettedugout {
+  background: url(src/img-resto/LaPaletteDuGout.jpg) center ;
+  background-size: cover;
+}
+#note-E {
+  background: url(src/img-resto/LaNoteEnchantée.jpg) center;
   background-size: cover;
 }
 
