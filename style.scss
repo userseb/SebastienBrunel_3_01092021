@@ -162,7 +162,7 @@ body {
   height: 80px;
   font-family: "Shrikhand", cursive;
   width: 100%;
-  box-shadow: 0 0 20px 8px 20px #d3d3d3;
+  box-shadow: 0 0 20 8 20 #d3d3d3;
 }
 .head-logo-P {
   @include flex-mid;
@@ -746,15 +746,15 @@ padding-left: 2px;
   }
 }
 #note-E {
-  background: url(src/img-resto/LaNoteEnchantée.jpg) center;
+  background: url(/src/img-resto/LaNoteEnchantée.jpg) center;
   background-size: cover;
 }
 .item3 {
-  background: url(src/img-resto/ALaFrancaise.jpg) center;
+  background: url(/src/img-resto/ALaFrancaise.jpg) center;
   background-size: cover;
 }
 .item4 {
-  background: url(src/img-resto/LeDeliceDesSens.jpg) center;
+  background: url(/src/img-resto/LeDeliceDesSens.jpg) center;
   background-size: cover;
 }
 
