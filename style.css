@@ -692,7 +692,7 @@ footer {
   width: 100%;
   background: #353535;
   color: white;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 footer h3 {
@@ -709,7 +709,7 @@ footer h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: auto;
+  width: 97%;
   padding: 0;
   -webkit-box-align: end;
       -ms-flex-align: end;
@@ -824,6 +824,7 @@ footer h3 {
   letter-spacing: 1px;
   border-radius: 35px 35px 0 0;
   font-style: normal;
+  margin: 0 5%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -1364,13 +1365,13 @@ footer h3 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    font-size: 15px;
+    font-size: 22px;
   }
   footer .h3 {
     margin: 30% 0;
   }
   footer .footer-list {
-    width: auto;
+    width: 93%;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr 1fr;

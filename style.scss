@@ -442,7 +442,7 @@ footer {
   width: 100%;
   background: #353535;
   color: white;
-  font-size: 20px;
+  font-size: 22px;
   h3 {
     margin-left: 10px;
     font-family: "Shrikhand", cursive;
@@ -452,7 +452,7 @@ footer {
 .footer-list {
   display: flex;
   flex-direction: column;
-  width: auto;
+  width: 97%;
   padding: 0;
   align-items: flex-end;
   margin: 0 0 30px 10px;
@@ -534,6 +534,7 @@ footer {
   letter-spacing: 1px;
   border-radius: 35px 35px 0 0;
   font-style: normal;
+  margin:0 5%;
   transition: 0.5s;
   .card-title {
     margin: 25px 0;
@@ -898,12 +899,13 @@ footer {
   }
   footer {
     align-items: center;
-    font-size: 15px;
+    font-size: 22px;
     .h3 {
+      
       margin: 30% 0;
     }
     .footer-list {
-      width: auto;
+      width: 93%;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       column-gap: 25px;
