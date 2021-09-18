@@ -820,7 +820,7 @@ footer h3 {
   -ms-grid-row: 4;
   grid-row: 4;
   background: #f6f6f6;
-  font-size: 16px;
+  font-size: 17px;
   letter-spacing: 1px;
   border-radius: 35px 35px 0 0;
   font-style: normal;
@@ -888,8 +888,14 @@ footer h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 83%;
+  width: 81%;
+  font-size: 17px;
+  font-weight: 400;
   margin: 0;
+}
+
+.sections-menu .title-underline .title-case {
+  width: 60%;
 }
 
 .sections-menu .title-underline .entrees {
@@ -899,8 +905,8 @@ footer h3 {
 
 .sections-menu .title-underline .underline {
   height: 1px;
-  background: #99E2D0;
-  width: 12%;
+  background: #99e2d0;
+  width: 50px;
   margin: 0 0 5px 10px;
 }
 
@@ -977,7 +983,8 @@ footer h3 {
   text-overflow: ellipsis;
 }
 
-.btn-text-case .title-menu, .btn-text-case .long-name {
+.btn-text-case .title-menu,
+.btn-text-case .long-name {
   display: block;
   width: 80%;
   overflow: hidden;
@@ -998,7 +1005,9 @@ footer h3 {
   padding-bottom: 15px;
 }
 
-.long-name, .text-food, .mentions {
+.long-name,
+.text-food,
+.mentions {
   font-weight: 400;
 }
 
@@ -1226,7 +1235,18 @@ footer h3 {
 }
 
 /**medias-query**/
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 960px) and (max-width: 1400px) {
+  .title-underline {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 95%;
+    margin-top: 20px;
+  }
   .card-text-case {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -1234,12 +1254,13 @@ footer h3 {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    margin: 0 5%;
+    margin: 0 3%;
     -webkit-transition: 0.5s;
     transition: 0.5s;
     padding: 0 5%;
     border-radius: 250px 250px 0 0;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
+    font-size: 17px;
   }
   .process {
     display: -webkit-box;
@@ -1328,6 +1349,10 @@ footer h3 {
         flex-wrap: wrap;
     -ms-flex-line-pack: end;
         align-content: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0 30px;
   }
   .items-menu {
     width: 30%;
