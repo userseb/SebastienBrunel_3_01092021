@@ -1262,27 +1262,74 @@ footer h3 {
     border-radius: 0 0.5rem 0.5rem 0;
     height: 100%;
   }
-  .restaurants {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    grid-gap: 20px;
-    width: 100%;
-    justify-items: center;
-    height: 100%;
+  .card-text-case {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0 3%;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    padding: 0 5%;
+    border-radius: 250px 250px 0 0;
+    letter-spacing: 2px;
+    font-size: 17px;
   }
-  .restaurants .bloc-restaurant {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
+  .restaurants {
+    width: 70%;
+    margin-right: 10px;
+    margin-bottom: 40px;
+  }
+  .bloc-restaurant {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 0.2fr;
+        grid-template-rows: 1fr 1fr 0.2fr;
+    width: 96%;
     height: 100%;
     -webkit-transition: 1.3s;
     transition: 1.3s;
+  }
+  footer {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 22px;
+  }
+  footer .h3 {
+    margin: 30% 0;
+  }
+  footer .footer-list {
+    width: 93%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    -webkit-column-gap: 25px;
+            column-gap: 25px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .icon-text {
+    width: auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    margin: 0;
   }
 }
 
@@ -1364,6 +1411,11 @@ footer h3 {
   }
   .process-bloc-resto:hover .btn_text {
     color: black;
+  }
+  .restaurants {
+    width: 70%;
+    margin-right: 10px;
+    margin-bottom: 40px;
   }
   .bloc-restaurant {
     display: -ms-grid;
