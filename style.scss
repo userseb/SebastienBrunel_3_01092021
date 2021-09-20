@@ -452,10 +452,10 @@ footer {
 .footer-list {
   display: flex;
   flex-direction: column;
-  width: 97%;
+  width: 100%;
   padding: 0;
   align-items: flex-end;
-  margin: 0 0 30px 10px;
+  margin: 0 0 30px 0;
   .footer_1,
   .footer_2,
   .footer_3,
@@ -466,9 +466,7 @@ footer {
     list-style-type: none;
   }
 }
-.mentions {
-  width: 100%;
-}
+
 .mentions:hover {
   text-decoration: underline 2px white;
 }
@@ -490,7 +488,8 @@ footer {
 .mentions {
   color: white;
   margin: 0 0 0 10px;
-  width: 100%;
+  width: 67%;
+  font-weight: 400;
 }
 /******pages-restaurants******/
 .R-header {
@@ -578,7 +577,7 @@ footer {
   justify-content: space-evenly;
   align-items: center;
   width: auto;
-  margin: 0 10px;
+  margin: 0;
   row-gap: 8px;
 
   .title-underline {
@@ -661,8 +660,7 @@ footer {
   }
 }
 .long-name,
-.text-food,
-.mentions {
+.text-food {
   font-weight: 400;
 }
 .price-icon {
@@ -810,21 +808,11 @@ footer {
 }
 /**medias-query**/
 @media screen and (min-width: 1401px) {
-  .process-restaurants {
-    display: flex;
-    width :100%;
-    height: 100%;
-
-    column-gap: 5px;
-    align-items: flex-start;
-  }
-  .process {
+  .title-underline {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    margin-top: 50px;
-    border-radius: 0 0.5rem 0.5rem 0;
-    height: 100%;
+    width: 95%;
+    margin-top: 20px;
   }
   .card-text-case {
     align-items: center;
@@ -836,6 +824,47 @@ footer {
     letter-spacing: 2px;
     font-size: 17px;
   }
+  
+  .process {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 50px;
+    border-radius: 0 0.5rem 0.5rem 0;
+    height: 100%;
+  }
+  .process-bloc {
+    display: flex;
+    row-gap: 5px;
+    width: 100%;
+  }
+  .process-bloc-resto {
+    margin: 20px 10px;
+  }
+  .btn_text {
+    width: auto;
+  }
+  .process-restaurants {
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    column-gap: 5px;
+    align-items: flex-start;
+  }
+  .process-bloc-resto:hover {
+    background: #f5edff;
+    transform: scale(1.0153);
+    transition: 0.31s;
+    color: #9356dc;
+
+    box-shadow: 0px 0px 3px 2px #9256dc4b;
+    -webkit-box-shadow: 0px 0px 3px 2px #9256dc4b;
+    -moz-box-shadow: 0px 0px 3px 2px #9256dc4b;
+    .btn_text {
+      color: black;
+    }
+  }
   .restaurants {
     width:70%;
     margin-right:10px;
@@ -845,34 +874,65 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 0.2fr;
-    width: 96%;
+    width: 100%;
     height: 100%;
     transition: 1.3s;
+  }
+  .card-menu {
+    display: grid;
+    grid-template-rows: 1fr;
+  }
+  .card-img-text {
+    align-items: center;
+  }
+  .sections-menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    justify-content: space-between;
+    margin:0 30px;
+  }
+  .items-menu {
+    width: 30%;
+  }
+
+  .search {
+    padding: 50px 0;
+  }
+  footer {
+    align-items: center;
+    font-size: 22px;
+    .h3 {
+      
+      margin: 30% 0;
     }
-    footer {
+    .footer-list {
+      width: 93%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      column-gap: 25px;
+      flex-direction: row;
+      flex-wrap: nowrap;
       align-items: center;
-      font-size: 22px;
-      .h3 {
-        
-        margin: 30% 0;
-      }
-      .footer-list {
-        width: 93%;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        column-gap: 25px;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-items: center;
-      }
-      .icon-text {
-        width: auto;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        margin: 0;
-      }
     }
+    .icon-text {
+      width: auto;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      margin: 0;
+    }
+  }
+  li {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0;
+    flex-direction: column;
+    align-items: stretch;
+    width: auto;
+  }
 }
+
 @media screen and (min-width: 960px) and (max-width: 1400px) {
   .title-underline {
     display: flex;
