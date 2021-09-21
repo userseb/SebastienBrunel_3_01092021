@@ -246,7 +246,7 @@ body {
   padding: 0;
   width: 100%;
   font-family: "roboto", sans-serif;
-  font-weight: 600;
+  overflow-x: hidden;
 }
 
 .header {
@@ -692,13 +692,15 @@ footer {
   width: 100%;
   background: #353535;
   color: white;
-  font-size: 22px;
+  font-size: 18px;
 }
 
 footer h3 {
   margin-left: 10px;
   font-family: "Shrikhand", cursive;
-  font-weight: 500;
+  font-weight: 100;
+  margin-left: 68px;
+  height: 4px;
 }
 
 .footer-list {
@@ -709,12 +711,12 @@ footer h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
-  padding: 0;
+  width: 80%;
+  margin-left: 20px;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  margin: 0 0 30px 0;
+  margin-bottom: 80px;
 }
 
 .footer-list .footer_1,
@@ -725,6 +727,8 @@ footer h3 {
   margin: 10px 0;
   text-decoration: none;
   list-style-type: none;
+  font-size: 10px;
+  height: 5px;
 }
 
 .mentions:hover {
@@ -740,23 +744,28 @@ footer h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   color: white;
   margin: 0 0 0 10px;
 }
 
 .icon-text .fa-utensils {
   color: white;
+  width: 19px;
+  font-size: 18px;
 }
 
 .icon-text h4 {
-  margin: 0 10px 0 10px;
+  margin: 0 10px;
+  font-size: 1px;
 }
 
 .mentions {
   color: white;
   margin: 0 0 0 10px;
   width: 67%;
-  font-weight: 400;
 }
 
 /******pages-restaurants******/
@@ -821,7 +830,6 @@ footer h3 {
   letter-spacing: 1px;
   border-radius: 35px 35px 0 0;
   font-style: normal;
-  margin: 0 5%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -833,30 +841,34 @@ footer h3 {
 .card-text-case .far,
 .card-text-case .fas {
   font-size: 27px;
-  -webkit-transition: 2.9s;
-  transition: 2.9s;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .card-text-case .fas {
   display: none;
   opacity: 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-text-case #icones-heart:hover {
+  -webkit-transition: 1.9s;
+  transition: 1.9s;
 }
 
 .card-text-case #icones-heart:hover .far {
-  opacity: 0;
   display: none;
 }
 
 .card-text-case #icones-heart:hover .fas {
-  display: block;
+  display: inline;
   opacity: 1;
-  -webkit-transition: 3.5s;
-  transition: 3.5s;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#b387d6), color-stop(#bf85d9), color-stop(#cc81db), color-stop(#d97edc), to(#e779db));
   background-image: linear-gradient(to top, #b387d6, #bf85d9, #cc81db, #d97edc, #e779db);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .sections-menu {
@@ -1041,8 +1053,8 @@ footer h3 {
 }
 
 .btn-text-case:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
   -webkit-transition: 0.31s;
   transition: 0.31s;
   box-shadow: 0px 0px 3px 1px #99e2d088;
@@ -1063,6 +1075,13 @@ footer h3 {
 .items-menu:hover .fa-check-circle {
   -webkit-animation: 0.3s 1 both rotation-logo;
           animation: 0.3s 1 both rotation-logo;
+}
+
+.items-menu:hover .long-name {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transform-origin: left -38px;
+          transform-origin: left -38px;
 }
 
 @-webkit-keyframes rotation-logo {
@@ -1119,6 +1138,7 @@ footer h3 {
   max-height: 200px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  margin-bottom: 45px;
 }
 
 .btn-search {
@@ -1599,6 +1619,13 @@ footer h3 {
         -ms-flex-align: stretch;
             align-items: stretch;
     width: auto;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .btn-text-case {
+    max-width: 360px;
+    min-width: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */

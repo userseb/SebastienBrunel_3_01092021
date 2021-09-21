@@ -1,3 +1,5 @@
+
+
 .monloader {
   display: flex;
   justify-content: center;
@@ -155,8 +157,9 @@ body {
   padding: 0;
   width: 100%;
   font-family: "roboto", sans-serif;
-  font-weight: 600;
+  overflow-x: hidden;
 }
+
 .header {
   @include flex-mid;
   height: 80px;
@@ -291,6 +294,7 @@ section.process h2 {
 }
 .process-bloc-resto:hover {
   cursor: pointer;
+  
   background: #f5edff;
   transform: scale(1.1);
   transition: 0.31s;
@@ -442,20 +446,24 @@ footer {
   width: 100%;
   background: #353535;
   color: white;
-  font-size: 22px;
+  font-size: 18px;
   h3 {
     margin-left: 10px;
     font-family: "Shrikhand", cursive;
-    font-weight: 500;
+    font-weight: 100;
+    margin-left: 68px;
+    height:4px;
   }
 }
 .footer-list {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  padding: 0;
+  width: 80%;
+  margin-left:20px;
   align-items: flex-end;
-  margin: 0 0 30px 0;
+  margin-bottom: 80px;
+  
+ 
   .footer_1,
   .footer_2,
   .footer_3,
@@ -464,6 +472,9 @@ footer {
     margin: 10px 0;
     text-decoration: none;
     list-style-type: none;
+    font-size:10px;
+    height:5px;
+    
   }
 }
 
@@ -475,21 +486,27 @@ footer {
   display: flex;
   width: 80%;
   align-items: center;
+  justify-content:flex-start;
   color: rgb(255, 255, 255);
   margin: 0 0 0 10px;
 
   .fa-utensils {
     color: white;
+    width: 19px;
+    font-size: 18px;
   }
   h4 {
-    margin: 0 10px 0 10px;
+    margin: 0 10px;
+    font-size: 1px;
+  
   }
 }
+
 .mentions {
   color: white;
   margin: 0 0 0 10px;
   width: 67%;
-  font-weight: 400;
+  
 }
 /******pages-restaurants******/
 .R-header {
@@ -533,7 +550,7 @@ footer {
   letter-spacing: 1px;
   border-radius: 35px 35px 0 0;
   font-style: normal;
-  margin:0 5%;
+  
   transition: 0.5s;
   .card-title {
     margin: 25px 0;
@@ -542,21 +559,26 @@ footer {
   .far,
   .fas {
     font-size: 27px;
-    transition: 2.9s;
+    transition: 1s;
+    
   }
   .fas {
     display: none;
     opacity: 0;
+    background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
   }
   #icones-heart:hover {
+    transition: 1.9s;
     .far {
-      opacity: 0;
+      
       display: none;
     }
     .fas {
-      display: block;
+      display:inline;
       opacity: 1;
-      transition: 3.5s;
+      transition: 1.5s;
       background-image: linear-gradient(
         to top,
         #b387d6,
@@ -565,9 +587,7 @@ footer {
         #d97edc,
         #e779db
       );
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      
     }
   }
 }
@@ -683,7 +703,7 @@ footer {
   margin-left: 20px;
 }
 .btn-text-case:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: 0.31s;
 
   box-shadow: 0px 0px 3px 1px #99e2d088;
@@ -700,6 +720,10 @@ footer {
   }
   .fa-check-circle {
     animation: 0.3s 1 both rotation-logo;
+  }
+  .long-name {
+    transform:scale(0.9);
+    transform-origin: left -38px;
   }
 }
 @keyframes rotation-logo {
@@ -722,6 +746,7 @@ footer {
   @include flex-mid;
   max-height: 200px;
   transition: 0.5s;
+  margin-bottom: 45px;
 }
 .btn-search {
   transition: 0.5s;
@@ -915,6 +940,7 @@ footer {
       flex-direction: row;
       flex-wrap: nowrap;
       align-items: center;
+      
     }
     .icon-text {
       width: auto;
@@ -1056,5 +1082,11 @@ footer {
     flex-direction: column;
     align-items: stretch;
     width: auto;
+  }
+}
+@media  screen and (max-width:460px) {
+  .btn-text-case {
+    max-width: 360px;
+    min-width: 20px;
   }
 }
