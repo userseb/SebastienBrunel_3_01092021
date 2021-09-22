@@ -183,6 +183,9 @@ body {
   @include flex-mid;
   font-size: 18px;
 }
+.icon-location input:hover {
+  cursor: pointer;
+}
 .location {
   @include flex-mid;
   .icon-location {
@@ -192,8 +195,12 @@ body {
     background: #eaeaea;
     width: 100%;
   }
-  p {
+  input {
     margin-left: 15px;
+    font-weight: bolder;
+    background: #eaeaea;
+    border:none;
+    width: 15%
   }
 }
 .blocs-intro {
@@ -385,21 +392,33 @@ section.process h2 {
 .text-icon {
   display: flex;
   font-size: 30px;
-  height: 30px;
-  width: 30px;
+  height: 35px;
+  width: 35px;
+  position:relative;
 
   .far {
-    height: 35px;
-    width: 35px;
-    transition: 0.9s;
+    height: 30px;
+    width: 30px;
+    transition: 0.4s;
     opacity: 1;
+    position:absolute;
   }
   .fas {
+    width: 35px;
     opacity: 0;
+    position: absolute;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition: 1.9s;
+    transition: 0.4s;
+    background-image: linear-gradient(
+      to top,
+      #b387d6,
+      #bf85d9,
+      #cc81db,
+      #d97edc,
+      #e779db
+    );
   }
 }
 .item1 {
@@ -422,21 +441,14 @@ section.process h2 {
 }
 .text-icon:hover {
   .far {
-    display: none;
+    
     opacity: 0;
-    transition: 1.9s;
+    transition: 0.9s;
   }
   .fas {
     opacity: 1;
-    transition: 1.9s;
-    background-image: linear-gradient(
-      to top,
-      #b387d6,
-      #bf85d9,
-      #cc81db,
-      #d97edc,
-      #e779db
-    );
+    transition: 0.9s;
+   
   }
 }
 
@@ -497,7 +509,7 @@ footer {
   }
   h4 {
     margin: 0 10px;
-    font-size: 1px;
+    font-size: 13px;
   
   }
 }
@@ -505,7 +517,7 @@ footer {
 .mentions {
   color: white;
   margin: 0 0 0 10px;
-  width: 67%;
+  width: 87%;
   
 }
 /******pages-restaurants******/
@@ -539,6 +551,18 @@ footer {
   width: 100%;
   height: 100%;
 }
+#icones-heart {
+  position: relative;
+  
+  .fa-heart {
+    position:absolute;
+    transition:0.5s;
+   left:-5%;
+    top:-15px;
+    
+    
+  }
+}
 .card-text-case {
   display: flex;
   justify-content: space-around;
@@ -559,26 +583,15 @@ footer {
   .far,
   .fas {
     font-size: 27px;
-    transition: 1s;
+    transition: 0.3s;
     
   }
   .fas {
-    display: none;
+    
     opacity: 0;
     background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-  }
-  #icones-heart:hover {
-    transition: 1.9s;
-    .far {
-      
-      display: none;
-    }
-    .fas {
-      display:inline;
-      opacity: 1;
-      transition: 1.5s;
       background-image: linear-gradient(
         to top,
         #b387d6,
@@ -587,6 +600,16 @@ footer {
         #d97edc,
         #e779db
       );
+  }
+  #icones-heart:hover {
+    transition: 1.9s;
+    .far {
+      opacity:0;
+    }
+    .fas {
+      opacity: 1;
+      transition: 1.5s;
+      
       
     }
   }
@@ -648,7 +671,7 @@ footer {
 .btn-text-case {
   @include btn-menu-flex;
   height: 70px;
-  padding: 0 0 0 20px;
+  padding: 0;
   transition: 0.3s;
 
   .fa-check-circle {
@@ -660,6 +683,16 @@ footer {
     font-size: 10px;
     overflow: hidden;
     text-overflow: ellipsis;
+    padding-left: 15px;
+  }
+  .title-menu {
+    margin-bottom: 2px;
+  }
+  .long-name {
+    transform: scale(0.95);
+    margin-top: 5px;
+    margin-left:-5px;
+    
   }
   .title-menu,
   .long-name {
@@ -668,6 +701,7 @@ footer {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    
   }
 
   .price-menu {
@@ -679,6 +713,7 @@ footer {
     padding-bottom: 15px;
   }
 }
+
 .long-name,
 .text-food {
   font-weight: 400;
@@ -721,10 +756,7 @@ footer {
   .fa-check-circle {
     animation: 0.3s 1 both rotation-logo;
   }
-  .long-name {
-    transform:scale(0.9);
-    transform-origin: left -38px;
-  }
+  
 }
 @keyframes rotation-logo {
   0% {

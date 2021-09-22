@@ -303,6 +303,10 @@ body {
   font-size: 18px;
 }
 
+.icon-location input:hover {
+  cursor: pointer;
+}
+
 .location {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -333,8 +337,12 @@ body {
   width: 100%;
 }
 
-.location p {
+.location input {
   margin-left: 15px;
+  font-weight: bolder;
+  background: #eaeaea;
+  border: none;
+  width: 15%;
 }
 
 .blocs-intro {
@@ -622,25 +630,31 @@ section.process h2 {
   display: -ms-flexbox;
   display: flex;
   font-size: 30px;
-  height: 30px;
-  width: 30px;
+  height: 35px;
+  width: 35px;
+  position: relative;
 }
 
 .text-icon .far {
-  height: 35px;
-  width: 35px;
-  -webkit-transition: 0.9s;
-  transition: 0.9s;
+  height: 30px;
+  width: 30px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   opacity: 1;
+  position: absolute;
 }
 
 .text-icon .fas {
+  width: 35px;
   opacity: 0;
+  position: absolute;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-transition: 1.9s;
-  transition: 1.9s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#b387d6), color-stop(#bf85d9), color-stop(#cc81db), color-stop(#d97edc), to(#e779db));
+  background-image: linear-gradient(to top, #b387d6, #bf85d9, #cc81db, #d97edc, #e779db);
 }
 
 .item1 {
@@ -667,18 +681,15 @@ section.process h2 {
 }
 
 .text-icon:hover .far {
-  display: none;
   opacity: 0;
-  -webkit-transition: 1.9s;
-  transition: 1.9s;
+  -webkit-transition: 0.9s;
+  transition: 0.9s;
 }
 
 .text-icon:hover .fas {
   opacity: 1;
-  -webkit-transition: 1.9s;
-  transition: 1.9s;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#b387d6), color-stop(#bf85d9), color-stop(#cc81db), color-stop(#d97edc), to(#e779db));
-  background-image: linear-gradient(to top, #b387d6, #bf85d9, #cc81db, #d97edc, #e779db);
+  -webkit-transition: 0.9s;
+  transition: 0.9s;
 }
 
 footer {
@@ -759,13 +770,13 @@ footer h3 {
 
 .icon-text h4 {
   margin: 0 10px;
-  font-size: 1px;
+  font-size: 13px;
 }
 
 .mentions {
   color: white;
   margin: 0 0 0 10px;
-  width: 67%;
+  width: 87%;
 }
 
 /******pages-restaurants******/
@@ -813,6 +824,18 @@ footer h3 {
   height: 100%;
 }
 
+#icones-heart {
+  position: relative;
+}
+
+#icones-heart .fa-heart {
+  position: absolute;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  left: -5%;
+  top: -15px;
+}
+
 .card-text-case {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -841,16 +864,17 @@ footer h3 {
 .card-text-case .far,
 .card-text-case .fas {
   font-size: 27px;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .card-text-case .fas {
-  display: none;
   opacity: 0;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#b387d6), color-stop(#bf85d9), color-stop(#cc81db), color-stop(#d97edc), to(#e779db));
+  background-image: linear-gradient(to top, #b387d6, #bf85d9, #cc81db, #d97edc, #e779db);
 }
 
 .card-text-case #icones-heart:hover {
@@ -859,16 +883,13 @@ footer h3 {
 }
 
 .card-text-case #icones-heart:hover .far {
-  display: none;
+  opacity: 0;
 }
 
 .card-text-case #icones-heart:hover .fas {
-  display: inline;
   opacity: 1;
   -webkit-transition: 1.5s;
   transition: 1.5s;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#b387d6), color-stop(#bf85d9), color-stop(#cc81db), color-stop(#d97edc), to(#e779db));
-  background-image: linear-gradient(to top, #b387d6, #bf85d9, #cc81db, #d97edc, #e779db);
 }
 
 .sections-menu {
@@ -976,7 +997,7 @@ footer h3 {
   -webkit-box-shadow: 0px 10px 12px 5px rgba(220, 218, 218, 0.75);
           box-shadow: 0px 10px 12px 5px rgba(220, 218, 218, 0.75);
   height: 70px;
-  padding: 0 0 0 20px;
+  padding: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -991,6 +1012,18 @@ footer h3 {
   font-size: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding-left: 15px;
+}
+
+.btn-text-case .title-menu {
+  margin-bottom: 2px;
+}
+
+.btn-text-case .long-name {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  margin-top: 5px;
+  margin-left: -5px;
 }
 
 .btn-text-case .title-menu,
@@ -1075,13 +1108,6 @@ footer h3 {
 .items-menu:hover .fa-check-circle {
   -webkit-animation: 0.3s 1 both rotation-logo;
           animation: 0.3s 1 both rotation-logo;
-}
-
-.items-menu:hover .long-name {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
-  -webkit-transform-origin: left -38px;
-          transform-origin: left -38px;
 }
 
 @-webkit-keyframes rotation-logo {
