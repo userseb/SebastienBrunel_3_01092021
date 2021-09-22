@@ -565,7 +565,7 @@ footer {
   .fa-heart {
     position:absolute;
     transition:0.5s;
-   left:-5%;
+   left:-36px;
     top:-15px;
     
     
@@ -695,17 +695,15 @@ footer {
   }
   .title-menu {
     margin-bottom: 2px;
+    
   }
   .long-name {
-    transform: scale(0.95);
-    margin-top: 5px;
-    
-    
+    margin-top: 5px; 
   }
   .title-menu,
   .long-name {
     display: block;
-    width: 80%;
+    width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;

@@ -841,7 +841,7 @@ footer h3 {
   position: absolute;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  left: -5%;
+  left: -36px;
   top: -15px;
 }
 
@@ -1029,15 +1029,13 @@ footer h3 {
 }
 
 .btn-text-case .long-name {
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
   margin-top: 5px;
 }
 
 .btn-text-case .title-menu,
 .btn-text-case .long-name {
   display: block;
-  width: 80%;
+  width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
