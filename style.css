@@ -600,6 +600,11 @@ body {
   border-radius: 3px;
 }
 
+.card-new {
+  -webkit-animation: 0.5s 0s infinite both new-case;
+          animation: 0.5s 0s infinite both new-case;
+}
+
 .text-case {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1151,6 +1156,32 @@ footer h3 {
   }
   to {
     width: 30px;
+  }
+}
+
+@-webkit-keyframes new-case {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    color: #008766;
+  }
+  to {
+    -webkit-transform: scale(1.07);
+            transform: scale(1.07);
+    color: white;
+  }
+}
+
+@keyframes new-case {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    color: #008766;
+  }
+  to {
+    -webkit-transform: scale(1.07);
+            transform: scale(1.07);
+    color: white;
   }
 }
 

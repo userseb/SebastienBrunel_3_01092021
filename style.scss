@@ -373,7 +373,11 @@ body {
     height: 28px;
     width: 85px;
     border-radius: 3px;
+    
   }
+}
+.card-new {
+  animation:0.5s 0s infinite both new-case;
 }
 .text-case {
   display: flex;
@@ -776,6 +780,16 @@ footer {
   }
   to {
     width: 30px;
+  }
+}
+@keyframes new-case{
+  from {
+    transform: scale(1);
+    color:#008766;
+  }
+  to {
+    transform: scale(1.07);
+    color:white;
   }
 }
 .search {
