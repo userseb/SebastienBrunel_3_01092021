@@ -429,6 +429,10 @@ body {
   margin-left: 20px;
 }
 
+.none {
+  display: none;
+}
+
 .process-bloc {
   display: -webkit-box;
   display: -ms-flexbox;

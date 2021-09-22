@@ -261,6 +261,10 @@ body {
 }
 .process-restaurants h2 {
   margin-left: 20px;
+  
+}
+.none{
+  display:none;
 }
 .process-bloc {
   @include flex-mid;
