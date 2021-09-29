@@ -339,7 +339,7 @@ body {
 
 .location input {
   margin-left: 15px;
-  font-weight: bolder;
+  font-weight: normal;
   background: #eaeaea;
   border: none;
   width: 135px;
@@ -889,6 +889,7 @@ footer h3 {
 .card-text-case #icones-heart:hover {
   -webkit-transition: 1.9s;
   transition: 1.9s;
+  cursor: pointer;
 }
 
 .card-text-case #icones-heart:hover .far {
